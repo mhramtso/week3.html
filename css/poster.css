@@ -8,7 +8,7 @@
 
 html {
     font-family:'Roboto', sans-serif;
-    color: #000000;
+    color: #777474;
 }
 
 .movie-card {
@@ -35,14 +35,14 @@ html {
     margin-top: 2rem;
     border-radius:5%;
     /*add for animation*/
-    position: relative;
-    left: -50rem;
-    animation: slide-from-left 3.5s ease-in-out forwards;
+    position: center;
+    opacity: 0;
+    animation: fade-in 3.5s ease-in-out forwards;
+    animation-delay: 1s;
 }
 
 @keyframes slide-from-left{
-    80% {left: 1.5rem;}
-    100% {left: 0;}
+    100% {opacity: 1;}
 }
 
 .movie-rating {
@@ -119,17 +119,18 @@ html {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(109, 96, 96, 0.6);
+    background-color: rgba(209, 204, 204, 0.61);
     z-index: 1;
     top: 0;
     left: 0;
     text-align: center;
 }
 .modal-content{
-    background-color: blanchedalmond;
+    background-color: rgba(187, 187, 185, 0.836);
     margin: 5% auto;
+    border-radius:10%;
     padding: 3rem;
-    width: 650px;
+    width: 500px;
     height: 650px;
     animation: zoom-in 1s;
 
@@ -143,16 +144,19 @@ html {
 .closeBtn {
     float: right;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .movie-poster-modal {
-    width: 300px;
+    width: 350px;
+    height: 500px;
+    position: center;
 }
 
 .movie-poster {
     width: 300px;
     cursor: pointer;
+
 }
 footer {
     margin-top: 2rem;
