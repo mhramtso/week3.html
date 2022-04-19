@@ -6,6 +6,61 @@
     box-sizing: border-box;
 }
 
+
+
+.carousel {
+    width: 75%;
+    text-align: center;
+    max-width: 500px;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: 290px;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 1s;
+
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 0.6;}
+}
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(187, 187, 187, 0.719);
+    font-size: 1.5rem;
+    color: rgb(99, 99, 99);
+    margin:0.5rem
+}
+
+
 html {
     font-family:'Roboto', sans-serif;
     color: #777474;
@@ -49,7 +104,6 @@ html {
     display: inline-block;
     border: 1px solid #151515;
     padding: 0.5rem;
-    border-radius: 5px;
     
 }
 
@@ -75,6 +129,11 @@ html {
 .movie-info-overview-title {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
+    margin-top: 2rem;
+}
+
+.movie-info-overview{
+    margin-top: 3rem;
 }
 
 .movie-info-actions {
@@ -96,8 +155,7 @@ html {
 .movie-info-actions ul li {
     display: inline-block;
     margin-right: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -126,11 +184,11 @@ html {
     text-align: center;
 }
 .modal-content{
-    background-color: rgba(187, 187, 185, 0.836);
+    background-color: rgba(187, 187, 185, 0.932);
     margin: 5% auto;
-    border-radius:10%;
     padding: 3rem;
     width: 500px;
+    border-radius: 5%;
     height: 650px;
     animation: zoom-in 1s;
 
@@ -154,18 +212,19 @@ html {
 }
 
 .movie-poster {
-    width: 300px;
+    width: 500px;
     cursor: pointer;
 
 }
 footer {
-    margin-top: 2rem;
+    margin-top: 45rem ;
     text-align: center;
     color: #777;
 }
 
 footer ul {
     list-style: none;
+
 }
 
 footer ul li {
